@@ -2,7 +2,7 @@
 
 ## About this project
 
-### Related task
+### Related course
 Pirple | The Node.js Master Class  
 Building a RESTful API ~ Homework Assignment #1: Hello World API
 
