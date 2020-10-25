@@ -12,7 +12,7 @@ const servers = {};
 
 // Instantiate the HTTP server:
 servers.http = HTTP.createServer((req, res) => {
-  handleRequest(req, res);
+  proceed(req, res);
 });
 
 // Start the HTTP server:
@@ -21,7 +21,7 @@ servers.http.listen(ENV.ports.http, () => {
 })
 
 // All the server logic for both http and https server.
-const handleRequest = function(req, res) {
+const proceed = function(req, res) {
   // Get the URL and parse it:
   const url = URL.parse(req.url, true);
   // Get the path:
