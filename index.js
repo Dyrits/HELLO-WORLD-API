@@ -51,16 +51,16 @@ const proceed = function(req, res) {
       "payload": buffer
     }
     // Route the request to the handler specified in the router:
-    handler(data, (statusCode, payload) => {
+    handler(data, (status, payload) => {
       payload = payload || {};
       // Convert the payload to a string:
-      const payloadString = JSON.stringify(payload);
+      payload = JSON.stringify(payload);
       // Return the response:
       res.setHeader("Content-Type", "application/json");
-      res.writeHead(statusCode);
-      res.end(payloadString);
+      res.writeHead(status);
+      res.end(payload);
       // Log:
-      console.log("Returning this response: ", statusCode, payloadString)
+      console.log("Returning this response:", status, payload)
     });
   });
 }
@@ -70,7 +70,7 @@ const proceed = function(req, res) {
 const handlers = {};
 handlers.hello = (data, callback) => {
   // Callback a HTTP status code, and a payload object:
-  callback(200, {"data": data, "message": "Hello World! Welcome to the API built for the Homework Assignment #1: Hello World API!"});
+  callback(200, {"request": data, "message": "Hello World! Welcome to the API built for the Homework Assignment #1: Hello World API!"});
 }
 handlers.notFound = (data, callback) => {
   callback(404);
