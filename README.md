@@ -1,26 +1,33 @@
 # Hello World API
 
-## About this project
+A simple RESTful JSON "Hello World" API in Node.js - Homework Assignment #1 from the Pirple course "The Node.js Master Class" (Building a RESTful API).
 
-### Related course
-Pirple | The Node.js Master Class  
-Building a RESTful API ~ Homework Assignment #1: Hello World API
+## About The Project
 
-### Description (by Pirple)
-#### Details:
- 
-Please create a simple "Hello World" API. Meaning:
+The assignment (from the course): create a simple "Hello World" API - a RESTful JSON API that listens on a chosen port and returns a welcome message in JSON format when someone sends an HTTP request to the route `/hello`.
 
-1. It should be a RESTful JSON API that listens on a port of your choice.
+## Built With
 
-2. When someone sends an HTTP request to the route /hello, you should return a welcome message, in JSON format. This message can be anything you want. 
+- Node.js
 
-### Main technology
-- Node
+## Getting Started
 
-### Status
-V1.00 - Completed
+### Running the API
 
-#### Last update
-25/10/2020
-(README | 25/10/2020)
+```bash
+node index.js
+```
+
+Then send a request to the `/hello` route on the configured port (see config.js).
+
+## Status
+
+V1.00 - Completed, per the original README.
+
+## License
+
+No license file is present in this repository.
+
+## Contact
+
+Dylan J. Gerrits - [GitHub](https://github.com/Dyrits)
